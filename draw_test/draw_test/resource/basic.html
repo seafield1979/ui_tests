@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>jQueryの基本</title>
+<script type="text/javascript" charset="utf-8" src="jquery-1.6.1.min.js"></script>
+<script type="text/javascript">
+	window.onload = function(){
+//		alert("hello world3");
+		$("#chap1").text("changed");
+		$("#link1").bind("click", function(){
+			location.href = "webView://dosample?[{\"aaa\":\"100\"}]";
+// 			location.href = "webView://dosample?bbb=100";
+		});
+	}
+</script>
+</head>
+<body>
+<h2>入門書特集</h2>
+<ul id="list">
+  <li class="jq" id="chap1">jQuery実践サンプル集</li>
+  <li class="js" id="chap2">JavaScript本格入門</li>
+  <li class="jq" id="chap3">10日でおぼえるjQuery</li>
+</ul>
+	<a href="javascript:void(0)" id="link1">dosample()</a>
+</body>
+</html>
