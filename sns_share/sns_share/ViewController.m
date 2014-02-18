@@ -49,17 +49,29 @@
 	
 	// 生成例
 	UIActionSheet *as = [[UIActionSheet alloc] init];
+	int itemCount = 0;
 	// デリゲートを設定する
 	as.delegate = self;
 	
 	as.title = @"選択してください。";
 	[as addButtonWithTitle:@"Ameba"];
-	[as addButtonWithTitle:@"Twitter"];
-	[as addButtonWithTitle:@"FaceBook"];
-	[as addButtonWithTitle:@"LINE"];
+	itemCount++;
+
+	if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"Twitter:"]]){
+		[as addButtonWithTitle:@"Twitter"];
+		itemCount++;
+	}
+	if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"fb:"]]){
+		[as addButtonWithTitle:@"Facebook"];
+		itemCount++;
+	}
+	if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"LINE:"]]){
+		[as addButtonWithTitle:@"LINE(link)"];
+		[as addButtonWithTitle:@"LINE(image)"];
+		itemCount+=2;
+	}
 	[as addButtonWithTitle:@"キャンセル"];
-	as.cancelButtonIndex = 4;
-//	as.destructiveButtonIndex = 0;
+	as.cancelButtonIndex = itemCount;
 	[as showInView:self.view];
 	
 	
@@ -69,28 +81,29 @@
 
 // アクションシートのボタンが押された時に呼ばれるデリゲート例文
 -(void)actionSheet:(UIActionSheet*)actionSheet
-clickedButtonAtIndex:(NSInteger)buttonIndex {
-	
-	switch (buttonIndex) {
-		case 0:
-			// Ameba
-			NSLog(@"1");
-			break;
-		case 1:
-			// Twitter
-			NSLog(@"2");
-			[self postToTwitter];
-			break;
-		case 2:
-			// Facebook
-			NSLog(@"3");
-			[self postToFacebook];
-			break;
-		case 3:
-			// LINE
-			[self postToLINE];
-			break;
+clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	NSString *clieckedButtonTitle = [actionSheet buttonTitleAtIndex:buttonIndex];
+	if ([clieckedButtonTitle isEqualToString:@"Ameba"]) {
+		// Ameba
 	}
+	else if([clieckedButtonTitle isEqualToString:@"Twitter"]) {
+		// Twitter
+		[self postToTwitter];
+	}
+	else if([clieckedButtonTitle isEqualToString:@"Facebook"]) {
+		// Facebook
+		[self postToFacebook];
+	}
+	else if([clieckedButtonTitle isEqualToString:@"LINE(link)"]) {
+		// LINE  リンク
+		[self postToLINE:1];
+	}
+	else if([clieckedButtonTitle isEqualToString:@"LINE(image)"]) {
+		// LINE  画像
+		[self postToLINE:2];
+	}
+
 }
 
 #pragma Private Method
@@ -177,34 +190,35 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 }
 
 // LINEに投稿
--(void)postToLINE
+// @param mode  1:リンク / 2:画像
+-(void)postToLINE:(int)mode
 {
-#if 0 // 画像投稿
-//	UIPasteboard * board = [UIPasteboard pasteboardWithUniqueName];
-	UIPasteboard *board = [UIPasteboard generalPasteboard];
-
-	[self downloadImage:@"https://ssl-ustat.amebame.com/exc/1392301146240/m2s4V.jpg?width=320&height=480"];
-
-	[board setData:UIImagePNGRepresentation(_sendImage) forPasteboardType:@"public.png"];
-	NSString *urlStr = [NSString stringWithFormat:@"line://msg/image/%@?text/aaa", board.name];
-	NSURL* url = [NSURL URLWithString:urlStr];
-	if ([[UIApplication sharedApplication] canOpenURL:url]) {
-		[[UIApplication sharedApplication] openURL:url];
-	} else {
-		//LINEインストールされていないか、仕様が変わったか。アラートなりを出しましょう
+	if(mode == 1){  // 画像投稿
+		// テキスト本文の中にURLを入れておくと、そのページのサムネイルを表示してくれる！
+		NSString* str = @"LINE使ってるとかリア充だろwwww http://www.nintendo.co.jp";
+		NSString *escapedStr = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		NSString* urlStr = [NSString stringWithFormat:@"line://msg/text/%@", escapedStr];
+		NSURL* url = [NSURL URLWithString:urlStr];
+		if ([[UIApplication sharedApplication] canOpenURL:url]) {
+			[[UIApplication sharedApplication] openURL:url];
+		} else {
+			//LINEインストールされていないか、仕様が変わったか。アラートなりを出しましょう
+		}
 	}
-#else // テキスト投稿
-	// テキスト本文の中にURLを入れておくと、そのページのサムネイルを表示してくれる！
-	NSString* str = @"LINE使ってるとかリア充だろwwww http://www.nintendo.co.jp";
-	NSString *escapedStr = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-	NSString* urlStr = [NSString stringWithFormat:@"line://msg/text/%@", escapedStr];
-	NSURL* url = [NSURL URLWithString:urlStr];
-	if ([[UIApplication sharedApplication] canOpenURL:url]) {
-		[[UIApplication sharedApplication] openURL:url];
-	} else {
-		//LINEインストールされていないか、仕様が変わったか。アラートなりを出しましょう
+	else{  // テキスト投稿
+		UIPasteboard *board = [UIPasteboard generalPasteboard];
+		
+		[self downloadImage:@"https://ssl-ustat.amebame.com/exc/1392301146240/m2s4V.jpg?width=320&height=480"];
+		
+		[board setData:UIImagePNGRepresentation(_sendImage) forPasteboardType:@"public.png"];
+		NSString *urlStr = [NSString stringWithFormat:@"line://msg/image/%@?text/aaa", board.name];
+		NSURL* url = [NSURL URLWithString:urlStr];
+		if ([[UIApplication sharedApplication] canOpenURL:url]) {
+			[[UIApplication sharedApplication] openURL:url];
+		} else {
+			//LINEインストールされていないか、仕様が変わったか。アラートなりを出しましょう
+		}
 	}
-#endif
 }
 
 /**

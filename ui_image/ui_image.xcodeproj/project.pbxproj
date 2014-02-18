@@ -23,6 +23,9 @@
 		58CB61A318B31B730022CBF4 /* ui_imageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CB61A218B31B730022CBF4 /* ui_imageTests.m */; };
 		58CB61AD18B31BF10022CBF4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58CB61AC18B31BF10022CBF4 /* ViewController.xib */; };
 		58CB61B018B31BF90022CBF4 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CB61AF18B31BF90022CBF4 /* MyView.m */; };
+		58CB61B918B325820022CBF4 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58CB61B618B325820022CBF4 /* cat.jpg */; };
+		58CB61BA18B325820022CBF4 /* icon_very_small_three_zabuton_glod.png in Resources */ = {isa = PBXBuildFile; fileRef = 58CB61B718B325820022CBF4 /* icon_very_small_three_zabuton_glod.png */; };
+		58CB61BB18B325820022CBF4 /* oogiri_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 58CB61B818B325820022CBF4 /* oogiri_logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		58CB61AC18B31BF10022CBF4 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		58CB61AE18B31BF90022CBF4 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
 		58CB61AF18B31BF90022CBF4 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		58CB61B618B325820022CBF4 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
+		58CB61B718B325820022CBF4 /* icon_very_small_three_zabuton_glod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_very_small_three_zabuton_glod.png; sourceTree = "<group>"; };
+		58CB61B818B325820022CBF4 /* oogiri_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oogiri_logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,7 @@
 				58CB618C18B31B720022CBF4 /* ViewController.h */,
 				58CB618D18B31B720022CBF4 /* ViewController.m */,
 				58CB61AC18B31BF10022CBF4 /* ViewController.xib */,
+				58CB61B518B325820022CBF4 /* Images */,
 				58CB618F18B31B720022CBF4 /* Images.xcassets */,
 				58CB617E18B31B720022CBF4 /* Supporting Files */,
 			);
@@ -158,6 +165,16 @@
 				58CB619F18B31B730022CBF4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58CB61B518B325820022CBF4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				58CB61B618B325820022CBF4 /* cat.jpg */,
+				58CB61B718B325820022CBF4 /* icon_very_small_three_zabuton_glod.png */,
+				58CB61B818B325820022CBF4 /* oogiri_logo.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,10 +253,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58CB61B918B325820022CBF4 /* cat.jpg in Resources */,
 				58CB619018B31B720022CBF4 /* Images.xcassets in Resources */,
 				58CB618218B31B720022CBF4 /* InfoPlist.strings in Resources */,
+				58CB61BA18B325820022CBF4 /* icon_very_small_three_zabuton_glod.png in Resources */,
 				58CB61AD18B31BF10022CBF4 /* ViewController.xib in Resources */,
 				58CB618B18B31B720022CBF4 /* Main.storyboard in Resources */,
+				58CB61BB18B325820022CBF4 /* oogiri_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
