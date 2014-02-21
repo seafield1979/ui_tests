@@ -25,6 +25,7 @@
 		58D17D4218B5EE1000CF3E16 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58D17D3F18B5EE1000CF3E16 /* cat.jpg */; };
 		58D17D4318B5EE1000CF3E16 /* icon_very_small_three_zabuton_glod.png in Resources */ = {isa = PBXBuildFile; fileRef = 58D17D4018B5EE1000CF3E16 /* icon_very_small_three_zabuton_glod.png */; };
 		58D17D4418B5EE1000CF3E16 /* oogiri_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 58D17D4118B5EE1000CF3E16 /* oogiri_logo.png */; };
+		58D17D4818B6184300CF3E16 /* ViewTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D17D4718B6184300CF3E16 /* ViewTest.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		58D17D3F18B5EE1000CF3E16 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cat.jpg; path = Images/cat.jpg; sourceTree = "<group>"; };
 		58D17D4018B5EE1000CF3E16 /* icon_very_small_three_zabuton_glod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_very_small_three_zabuton_glod.png; path = Images/icon_very_small_three_zabuton_glod.png; sourceTree = "<group>"; };
 		58D17D4118B5EE1000CF3E16 /* oogiri_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oogiri_logo.png; path = Images/oogiri_logo.png; sourceTree = "<group>"; };
+		58D17D4718B6184300CF3E16 /* ViewTest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewTest.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,17 +123,12 @@
 		58D17D0B18B5E2F500CF3E16 /* ui_textfield */ = {
 			isa = PBXGroup;
 			children = (
+				58D17D4B18B619CF00CF3E16 /* ViewControllers */,
+				58D17D4A18B6197500CF3E16 /* Images */,
+				58D17D4918B6196400CF3E16 /* Utility */,
 				58D17D1418B5E2F500CF3E16 /* AppDelegate.h */,
 				58D17D1518B5E2F500CF3E16 /* AppDelegate.m */,
-				58D17D3A18B5E34700CF3E16 /* ViewController.xib */,
-				58D17D1A18B5E2F500CF3E16 /* ViewController.h */,
-				58D17D1B18B5E2F500CF3E16 /* ViewController.m */,
-				58D17D3C18B5E69900CF3E16 /* UIView+Debug.h */,
-				58D17D3D18B5E69900CF3E16 /* UIView+Debug.m */,
 				58D17D1D18B5E2F500CF3E16 /* Images.xcassets */,
-				58D17D3F18B5EE1000CF3E16 /* cat.jpg */,
-				58D17D4018B5EE1000CF3E16 /* icon_very_small_three_zabuton_glod.png */,
-				58D17D4118B5EE1000CF3E16 /* oogiri_logo.png */,
 				58D17D0C18B5E2F500CF3E16 /* Supporting Files */,
 			);
 			path = ui_textfield;
@@ -164,6 +161,36 @@
 				58D17D2D18B5E2F500CF3E16 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58D17D4918B6196400CF3E16 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				58D17D3C18B5E69900CF3E16 /* UIView+Debug.h */,
+				58D17D3D18B5E69900CF3E16 /* UIView+Debug.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		58D17D4A18B6197500CF3E16 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				58D17D3F18B5EE1000CF3E16 /* cat.jpg */,
+				58D17D4018B5EE1000CF3E16 /* icon_very_small_three_zabuton_glod.png */,
+				58D17D4118B5EE1000CF3E16 /* oogiri_logo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		58D17D4B18B619CF00CF3E16 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				58D17D3A18B5E34700CF3E16 /* ViewController.xib */,
+				58D17D4718B6184300CF3E16 /* ViewTest.xib */,
+				58D17D1A18B5E2F500CF3E16 /* ViewController.h */,
+				58D17D1B18B5E2F500CF3E16 /* ViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58D17D4818B6184300CF3E16 /* ViewTest.xib in Resources */,
 				58D17D1E18B5E2F500CF3E16 /* Images.xcassets in Resources */,
 				58D17D3B18B5E34700CF3E16 /* ViewController.xib in Resources */,
 				58D17D4318B5EE1000CF3E16 /* icon_very_small_three_zabuton_glod.png in Resources */,

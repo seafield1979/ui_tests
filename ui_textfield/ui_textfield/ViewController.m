@@ -28,6 +28,18 @@
 	//角丸テスト
 	_popupView.layer.cornerRadius = 10;
 	_popupView.clipsToBounds = true;
+	
+	// xibからviewを生成
+	/*
+	NSArray *topLevelViews = [[NSBundle mainBundle] loadNibNamed:@"ViewTest" owner:self options:nil];
+	UIView *view1 = [topLevelViews objectAtIndex:0];
+	UIView *view2 = [topLevelViews objectAtIndex:1];
+	[self.view addSubview:view1];
+	view2.frame = CGRectMake(0, 200, view2.frame.size.width, view2.frame.size.height);
+	[self.view addSubview:view2];
+	[self.view addSubview:[topLevelViews objectAtIndex:0]];
+	 */
+	
 }
 
 - (void)didReceiveMemoryWarning
