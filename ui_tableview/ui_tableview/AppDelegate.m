@@ -14,9 +14,14 @@
 {
 	// ここから
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+#if 0
 	self.viewController = [[MyViewController alloc] initWithNibName:@"MyViewController" bundle:[NSBundle mainBundle]];
 	
     self.window.rootViewController = self.viewController;
+#else
+	self.tableViewControllerl = [[UNTableViewController2 alloc]initWithNibName:@"UNTableViewController2" bundle:[NSBundle mainBundle]];
+	self.window.rootViewController = self.tableViewControllerl;
+#endif
     [self.window makeKeyAndVisible];
     // ここまでを追加
     return YES;

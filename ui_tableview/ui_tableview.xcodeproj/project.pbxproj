@@ -23,6 +23,9 @@
 		588718C918927162001AAD93 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588718C718927162001AAD93 /* MyViewController.xib */; };
 		588718D218928C46001AAD93 /* TableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588718D118928C46001AAD93 /* TableView.xib */; };
 		588718D418928C90001AAD93 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 588718D318928C90001AAD93 /* check.png */; };
+		58A848A718D984ED002747B2 /* UNTableViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A848A518D984ED002747B2 /* UNTableViewController2.m */; };
+		58A848A818D984ED002747B2 /* UNTableViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A848A618D984ED002747B2 /* UNTableViewController2.xib */; };
+		58A848AB18D987EF002747B2 /* listJson.txt in Resources */ = {isa = PBXBuildFile; fileRef = 58A848AA18D987EF002747B2 /* listJson.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,10 @@
 		588718C718927162001AAD93 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
 		588718D118928C46001AAD93 /* TableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableView.xib; sourceTree = "<group>"; };
 		588718D318928C90001AAD93 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		58A848A418D984ED002747B2 /* UNTableViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNTableViewController2.h; sourceTree = "<group>"; };
+		58A848A518D984ED002747B2 /* UNTableViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNTableViewController2.m; sourceTree = "<group>"; };
+		58A848A618D984ED002747B2 /* UNTableViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNTableViewController2.xib; sourceTree = "<group>"; };
+		58A848AA18D987EF002747B2 /* listJson.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = listJson.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +123,16 @@
 		0799C648182F3D0C008C5B68 /* ui_tableview */ = {
 			isa = PBXGroup;
 			children = (
+				58A848A918D987E0002747B2 /* Resources */,
 				0799C651182F3D0C008C5B68 /* AppDelegate.h */,
 				0799C652182F3D0C008C5B68 /* AppDelegate.m */,
 				588718C518927162001AAD93 /* MyViewController.h */,
 				588718C618927162001AAD93 /* MyViewController.m */,
 				588718D118928C46001AAD93 /* TableView.xib */,
 				588718C718927162001AAD93 /* MyViewController.xib */,
+				58A848A418D984ED002747B2 /* UNTableViewController2.h */,
+				58A848A518D984ED002747B2 /* UNTableViewController2.m */,
+				58A848A618D984ED002747B2 /* UNTableViewController2.xib */,
 				588718D318928C90001AAD93 /* check.png */,
 				0799C654182F3D0C008C5B68 /* Images.xcassets */,
 				0799C649182F3D0C008C5B68 /* Supporting Files */,
@@ -156,6 +167,14 @@
 				0799C664182F3D0C008C5B68 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58A848A918D987E0002747B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				58A848AA18D987EF002747B2 /* listJson.txt */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,10 +252,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58A848A818D984ED002747B2 /* UNTableViewController2.xib in Resources */,
 				0799C64D182F3D0C008C5B68 /* InfoPlist.strings in Resources */,
 				588718D418928C90001AAD93 /* check.png in Resources */,
 				588718D218928C46001AAD93 /* TableView.xib in Resources */,
 				0799C655182F3D0C008C5B68 /* Images.xcassets in Resources */,
+				58A848AB18D987EF002747B2 /* listJson.txt in Resources */,
 				588718C918927162001AAD93 /* MyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58A848A718D984ED002747B2 /* UNTableViewController2.m in Sources */,
 				588718C818927162001AAD93 /* MyViewController.m in Sources */,
 				0799C653182F3D0C008C5B68 /* AppDelegate.m in Sources */,
 				0799C64F182F3D0C008C5B68 /* main.m in Sources */,

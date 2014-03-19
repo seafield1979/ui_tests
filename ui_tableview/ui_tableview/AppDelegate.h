@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MyViewController.h"
+#import "UNTableViewController2.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) MyViewController *viewController;
+@property (strong, nonatomic) UNTableViewController2 *tableViewControllerl;
 
 @end
