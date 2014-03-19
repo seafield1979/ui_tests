@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>773F50B8-5A85-429B-BE4B-AA9EBBC8ABDF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>facebook</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9C2339FB-AD2B-4AC0-9E2F-D92B4F6AB1DD</key>
+		<string>https://github.com/seafield1979/ui_tests</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>facebook/facebook.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9C2339FB-AD2B-4AC0-9E2F-D92B4F6AB1DD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/seafield1979/ui_tests</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9C2339FB-AD2B-4AC0-9E2F-D92B4F6AB1DD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9C2339FB-AD2B-4AC0-9E2F-D92B4F6AB1DD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios_samples</string>
+		</dict>
+	</array>
+</dict>
+</plist>
