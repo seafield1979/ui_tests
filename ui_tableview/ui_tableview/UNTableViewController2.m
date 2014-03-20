@@ -7,6 +7,7 @@
 //
 
 #import "UNTableViewController2.h"
+#import "SwitchCell.h"
 
 @interface UNTableViewController2 ()
 {
@@ -88,16 +89,31 @@
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+	if (indexPath.row == 1 || indexPath.row == 2){
+		static NSString *CellIdentifier = @"switchCell";
+		SwitchCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+		if (cell == nil) {
+			[tableView registerNib:[UINib nibWithNibName:@"switchCell" bundle:Nil] forCellReuseIdentifier:CellIdentifier];
+			cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+		}
+		cell.label1.text = [_list1 objectAtIndex:indexPath.row];
+		
+		[cell.switch1 addTarget:self action:@selector(changedSwitchState:) forControlEvents:UIControlEventValueChanged];
+		
+		cell.switch1.tag = indexPath.row;
+		return cell;
+	}
+	else {
+		static NSString *CellIdentifier1 = @"Cell";
+		SwitchCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier1];
+		
+		if (cell == nil) {
+			cell = [[SwitchCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier1];
+			cell.textLabel.text = [_list1 objectAtIndex:indexPath.row];
+		}
 		cell.textLabel.text = [_list1 objectAtIndex:indexPath.row];
-    }
-    
-    // Configure the cell...
-    
-    return cell;
+		return cell;
+	}
 }
 
 /**
@@ -186,7 +202,23 @@ titleForHeaderInSection:(NSInteger)section
 			break;
 	}
 }
- 
+
+#pragma mark - Private Method
+
+-(void)changedSwitchState:(UISwitch*)switch1{
+   // ここに何かの処理を記述する
+   // （引数の switch には呼び出し元のUISwitchオブジェクトが引き渡されてきます）
+	NSLog(@"switch %d", switch1.on);
+	switch(switch1.tag){
+		case 1:
+			NSLog(@"111");
+			break;
+		case 2:
+			NSLog(@"222");
+			break;
+	}
+}
+							   
 
 
 @end
